@@ -7,6 +7,6 @@ The data includes the following metrics for each year and each item : Average Cl
 Tools & Libraries Used : Python, Pandas, Matplotlib, Seaborn, Plotly, Numpy, Scipy
 
 About Resource : 
-https://www.macrotrends.net/1369/crude-oil-price-history-chart
-https://www.macrotrends.net/1333/historical-gold-prices-100-year-chart
-https://www.macrotrends.net/2575/us-dollar-yuan-exchange-rate-historical-chart
+https://www.macrotrends.net/1369/crude-oil-price-history-chart  ,
+https://www.macrotrends.net/1333/historical-gold-prices-100-year-chart  ,
+https://www.macrotrends.net/2575/us-dollar-yuan-exchange-rate-historical-chart  .
