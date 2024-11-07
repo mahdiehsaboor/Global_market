@@ -17,22 +17,21 @@ df["DXY Average Closing Price"] = pd.to_numeric(df["DXY Average Closing Price"],
 # Remove rows with missing values
 df = df.dropna()
 
-# endregion
 
-# region plot
+#plot
 
 # Trends over time for Gold, Oil, and DXY
 fig = px.line(df, x="Year", y=["Gold Year Close", "Oil Year Close", "DXY Year Close"],
               title="Trends of Gold, Oil, and DXY over Time")
 fig.show()
 
-# Correlation heatmap
+# Correlation_heatmap
 correlation = df[['Gold Average Closing Price', 'Oil Average Closing Price', 'DXY Average Closing Price']].corr()
 sns.heatmap(correlation, annot=True, cmap="coolwarm")
 plt.title('Correlation Heatmap between Gold, Oil, and DXY')
 plt.show()
 
-# Box plot to highlight outliers
+# Box_plot to highlight outliers
 fig = px.box(df, x="Year", y="Gold Year Close", title="Gold Year Close Outliers")
 fig.show()
 
@@ -50,9 +49,8 @@ fig = px.scatter(df, x="Year", y="Gold Year Close", color=outliers_data.index,
                  title="Gold Year Close with Outliers Highlighted")
 fig.show()
 
-# endregion
 
-# region highst & lowest value in each year
+#highst & lowest value in each year
 
 values = tuple(zip((df.groupby("Year")["Gold Year Close"].max().values),
                    (df.groupby("Year")["Gold Year Close"].min().values),
@@ -77,9 +75,8 @@ ax.legend()
 ax.grid()
 plt.show()
 
-# endregion
 
-# region outlier handling and average price
+#outlier handling and average price
 
 df_avrage = df
 average_price = np.average(df_avrage["Gold Year Close"].values)
@@ -133,5 +130,3 @@ plt.xlabel("Index")
 plt.title(f"Average Gold Price\n Average price : {average_price}", fontsize=16)
 
 plt.show()
-
-# endregion
