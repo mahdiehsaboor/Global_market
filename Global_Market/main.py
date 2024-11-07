@@ -10,6 +10,9 @@ df = pd.read_csv(r"archive/my-data.csv")
 
 # region clean data
 # Convert columns to numeric where necessary
+#print(df.columns)
+#df.columns = df.columns.str.strip()
+#print("Columns after stripping spaces:", df.columns)
 df["Gold Average Closing Price"] = pd.to_numeric(df["Gold Average Closing Price"], errors="coerce")
 df["Oil Average Closing Price"] = pd.to_numeric(df["Oil Average Closing Price"], errors="coerce")
 df["DXY Average Closing Price"] = pd.to_numeric(df["DXY Average Closing Price"], errors="coerce")
